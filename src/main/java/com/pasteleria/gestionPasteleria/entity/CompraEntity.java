@@ -11,33 +11,38 @@ import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.util.Date; 
 import lombok.*; 
+import lombok.experimental.FieldDefaults;
 
 @Builder 
 @NoArgsConstructor 
 @AllArgsConstructor 
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name="CompraEntity") 
 @Table(name="compra")
 public class CompraEntity implements Serializable {
+    
     private static final long serialVersionUID=1L;
 
     @Id 
     @Column(name="codcompra")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    Long codigo;
 
     @ManyToOne
     @JoinColumn(name = "codproveedor", nullable = false)
-    private ProveedorEntity proveedor;
+    ProveedorEntity proveedor;
     
     @ManyToOne
     @JoinColumn(name = "codempleado", nullable = false)
-    private ProveedorEntity empleado;
+    ProveedorEntity empleado;
     
     @Column(name="fechacompra")
-    private Date fechaCompra;
+    Date fechaCompra;
+    
     @Column(name="totalcompra")
-    private double totalCompra;
+    double totalCompra;
+    
     @Column(name="estado")
-    private boolean estado;
+    boolean estado;
 }

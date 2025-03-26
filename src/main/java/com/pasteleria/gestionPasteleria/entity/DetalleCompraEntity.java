@@ -10,11 +10,13 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 @Builder 
 @NoArgsConstructor 
 @AllArgsConstructor 
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name="DetalleCompraEntity") 
 @Table(name="detalle_compra")
 public class DetalleCompraEntity implements Serializable {
@@ -23,17 +25,22 @@ public class DetalleCompraEntity implements Serializable {
     @Id 
     @Column(name="coddetallecompra")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    Long codigo;
+    
     @ManyToOne
     @JoinColumn(name = "codcompra", nullable = false)
-    private CompraEntity compra;
+    CompraEntity compra;
+    
     @ManyToOne
     @JoinColumn(name = "codinsumo", nullable = false)
-    private InsumoEntity insumo;
+    InsumoEntity insumo;
+    
     @Column(name="cantidad")
-    private int cantidad;
+    int cantidad;
+    
     @Column(name="precio_unitario")
-    private double precioUnitario;
+    double precioUnitario;
+    
     @Column(name="subtotal")
-    private double subtotal;
+    double subtotal;
 }

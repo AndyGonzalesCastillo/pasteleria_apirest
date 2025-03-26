@@ -10,33 +10,41 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.*;
-
+import lombok.experimental.FieldDefaults;
 
 @Builder 
 @NoArgsConstructor 
 @AllArgsConstructor 
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name="DetallePedidoEntity") 
 @Table(name="detalle_pedido")
 public class DetallePedidoEntity implements Serializable {
+   
     private static final long serialVersionUID=1L;
 
     @Id 
     @Column(name="coddetallepedido")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    Long codigo;
+    
     @ManyToOne
     @JoinColumn(name = "codpedido", nullable = false)
-    private PedidoEntity pedido;
+    PedidoEntity pedido;
+    
     @ManyToOne
     @JoinColumn(name = "codproducto", nullable = false)
-    private ProductoEntity producto;
+    ProductoEntity producto;
+    
     @Column(name="cantidad")
-    private int cantidad;
+    int cantidad;
+    
     @Column(name="precio_unitario")
-    private double precioUnitario;
+    double precioUnitario;
+    
     @Column(name="subtotal")
-    private double subtotal;
+    double subtotal;
+    
     @Column(name="especificaciones")
-    private String especificaciones;
+    String especificaciones;
 }

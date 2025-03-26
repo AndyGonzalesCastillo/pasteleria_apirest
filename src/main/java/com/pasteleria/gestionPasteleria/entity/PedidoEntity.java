@@ -11,11 +11,13 @@ import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.*;
 import java.util.Date; 
+import lombok.experimental.FieldDefaults;
 
 @Builder 
 @NoArgsConstructor 
 @AllArgsConstructor 
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name="PedidoEntity") 
 @Table(name="pedido")
 public class PedidoEntity implements Serializable {
@@ -24,29 +26,35 @@ public class PedidoEntity implements Serializable {
     @Id 
     @Column(name="codpedido")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    Long codigo;
+    
     @ManyToOne
     @JoinColumn(name = "codcliente", nullable = false)
-    private ClienteEntity cliente;
+    ClienteEntity cliente;
+    
     @ManyToOne
     @JoinColumn(name = "codempleado", nullable = false)
-    private EmpleadoEntity empleado;
+    EmpleadoEntity empleado;
+    
     @Column(name="fecha_pedido")
-    private Date fechaPedido;
+    Date fechaPedido;
+    
     @Column(name="fecha_entrega")
-    private Date fechaEntrega;
+    Date fechaEntrega;
+    
     @Column(name="tipo_entrega")
-    private String tipoEntrega;
+    String tipoEntrega;
+    
     @Column(name="direccion_entrega")
-    private String direccion;
+    String direccion;
     
     @Column(name="estado_pedido")
-    private String estadoPedido;
+    String estadoPedido;
     @Column(name="total")
-    private double total;
+    double total;
     
     @Column(name="observaciones")
-    private String observaciones;
+    String observaciones;
     @Column(name="estado")
-    private boolean estado;
+    boolean estado;
 }

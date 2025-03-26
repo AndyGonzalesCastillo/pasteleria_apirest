@@ -9,16 +9,18 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
-import java.util.Date;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
 
 @Builder 
 @NoArgsConstructor 
 @AllArgsConstructor 
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name="ProductoEntity") 
 @Table(name="producto")
 public class ProductoEntity implements Serializable  {
@@ -28,24 +30,27 @@ public class ProductoEntity implements Serializable  {
     @Id
     @Column(name = "codproducto")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    Long codigo;
     
-   
     @ManyToOne
     @JoinColumn(name = "codcategoria", nullable = false)
-    private CategoriaEntity categoria;
+    CategoriaEntity categoria;
 
     @Column(name="nomproducto")
-    private String nombre;
-    @Column(name="descripcionproducto")
-    private String descripcion;
-    @Column(name="precio")
-    private double precio;
-    @Column(name="tiempo_preparacion")
-    private int tiempoPreparacion;
-    @Column(name="stock")
-    private int stock;
-    @Column(name="estado")
-    private boolean estado;
+    String nombre;
     
+    @Column(name="descripcionproducto")
+    String descripcion;
+    
+    @Column(name="precio")
+    double precio;
+    
+    @Column(name="tiempo_preparacion")
+    int tiempoPreparacion;
+    
+    @Column(name="stock")
+    int stock;
+    
+    @Column(name="estado")
+    boolean estado;
 }

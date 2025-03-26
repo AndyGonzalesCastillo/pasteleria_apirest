@@ -5,20 +5,20 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
-import java.util.Date;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
 
 @Builder 
 @NoArgsConstructor 
 @AllArgsConstructor 
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name="ProveedorEntity") 
 @Table(name="proveedor")
 public class ProveedorEntity implements Serializable  {
@@ -28,17 +28,21 @@ public class ProveedorEntity implements Serializable  {
     @Id
     @Column(name = "codproveedor")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    Long codigo;
     
     @Column(name="nomproveedor")
-    private String nombre;
+    String nombre;
+    
     @Column(name="dirproveedor")
-    private String direccion;
+    String direccion;
+    
     @Column(name="correoproveedor")
-    private String correo;
+    String correo;
+    
     @Column(name="telefonoproveedor")
-    private String telefono;
+    String telefono;
+    
     @Column(name="estado")
-    private boolean estado;
+    boolean estado;
     
 }

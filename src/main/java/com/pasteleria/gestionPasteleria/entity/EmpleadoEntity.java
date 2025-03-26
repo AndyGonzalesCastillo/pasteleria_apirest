@@ -5,44 +5,53 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import lombok.experimental.FieldDefaults;
 
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name = "EmpleadoEntity")
 @Table(name = "empleado")
 public class EmpleadoEntity implements Serializable  {
+    
     private static final long serialVersionUID=1L;
 
     @Id 
     @Column(name="codempleado")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    Long codigo;
+    
     @Column(name="nomempleado")
-    private String nombre;
+    String nombre;
+    
     @Column(name="apeempleado")
-    private String apellido;
+    String apellido;
+    
     @Column(name="dirempleado")
-    private String direccion;
+    String direccion;
+    
     @Column(name="correoempleado")
-    private String correo;
+    String correo;
+    
     @Column(name="telefonoempleado")
-    private String telefono;
+    String telefono;
+    
     @Column(name="puesto")
-    private String puesto;
+    String puesto;
+    
     @Column(name="fecha_contratacion")
-    private Date fechaContratacion;
+    Date fechaContratacion;
+    
     @Column(name="estado")
-    private boolean estado;
+    boolean estado;
 }

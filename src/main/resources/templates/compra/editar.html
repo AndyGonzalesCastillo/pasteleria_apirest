@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Pastelería - Actualizar Compras</title>
+		<link th:href="@{/css/style.css}" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1><i class="fas fa-edit"></i> Actualización de Compras</h1>
+		</header>
+
+		<nav>
+			<button class="menu-toggle" id="menuToggle">
+				<i class="fas fa-bars"></i> Menú de Navegación
+			</button>
+			<div class="nav-container" id="navContainer">
+				<a th:href="@{/listarcategoria}" class="nav-item">
+					<i class="fas fa-tags"></i> Categorías
+				</a>
+				<a th:href="@{/listarcliente}" class="nav-item">
+					<i class="fas fa-users"></i> Clientes
+				</a>
+				<a th:href="@{/listarcompra}" class="nav-item active">
+					<i class="fas fa-shopping-cart"></i> Compras
+				</a>
+				<a th:href="@{/listardetallecompra}" class="nav-item">
+					<i class="fas fa-receipt"></i> Detalle C.
+				</a>
+				<a th:href="@{/listardetallepedido}" class="nav-item">
+					<i class="fas fa-clipboard-list"></i> Detalle P.
+				</a>
+				<a th:href="@{/listarempleado}" class="nav-item">
+					<i class="fas fa-id-card"></i> Empleados
+				</a>
+				<a th:href="@{/listarinsumo}" class="nav-item">
+					<i class="fas fa-box-open"></i> Insumos
+				</a>
+				<a th:href="@{/listarpedido}" class="nav-item">
+					<i class="fas fa-cookie"></i> Pedidos
+				</a>
+				<a th:href="@{/listarproducto}" class="nav-item">
+					<i class="fas fa-birthday-cake"></i> Productos
+				</a>
+				<a th:href="@{/listarproveedor}" class="nav-item">
+					<i class="fas fa-truck"></i> Proveedores
+				</a>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="card fade-in">
+				<h2>Actualizar Información de Compra</h2>
+				<p>Complete los campos para actualizar la compra seleccionada.</p>
+
+				<form
+					th:action="@{/actualizarcompra/{id}(id=${compras.codigo})}"
+					method="post"
+					th:object="${compras}"
+					class="form-container"
+				>
+					<div class="form-group">
+						<label for="txtCod">
+							<i class="fas fa-hashtag"></i> Código:
+						</label>
+						<input
+							type="text"
+							id="txtCod"
+							name="txtCod"
+							readonly
+							th:field="*{codigo}"
+							th:value="${compras.codigo}"
+							class="form-control readonly"
+						/>
+						<small>Este campo no se puede modificar</small>
+					</div>
+
+					<div class="form-group">
+						<label for="cboProveedor">
+							<i class="fas fa-truck"></i> Proveedor:
+						</label>
+						<select
+							class="form-control"
+							id="cboProveedor"
+							name="cboProveedor"
+							th:field="*{proveedor}"
+							required
+						>
+							<option value="0">Seleccione un proveedor</option>
+							<option
+								th:each="proveedor:${proveedores}"
+								th:value="${proveedor.codigo}"
+								th:text="${proveedor.nombre}"
+							></option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="cboEmpleado">
+							<i class="fas fa-user-tie"></i> Empleado:
+						</label>
+						<select
+							class="form-control"
+							id="cboEmpleado"
+							name="cboEmpleado"
+							th:field="*{empleado}"
+							required
+						>
+							<option value="0">Seleccione un empleado</option>
+							<option
+								th:each="empleado:${empleados}"
+								th:value="${empleado.codigo}"
+								th:text="${empleado.nombre + ' ' + empleado.apellido}"
+							></option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="txtFecCom">
+							<i class="fas fa-calendar-alt"></i> Fecha Compra:
+						</label>
+						<input
+							type="date"
+							class="form-control"
+							id="txtFecCom"
+							name="fechaCompra"
+							th:field="*{fechaCompra}"
+							th:value="${compras.fechaCompra}"
+							required
+							pattern="\d{4}-\d{2}-\d{2}"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="txtTot">
+							<i class="fas fa-money-bill-wave"></i> Total Compra:
+						</label>
+						<input
+							type="text"
+							class="form-control"
+							id="txtTot"
+							name="txtTot"
+							th:field="*{totalCompra}"
+							th:value="${compras.totalCompra}"
+							required
+						/>
+					</div>
+
+					<div class="form-group checkbox-group">
+						<label class="checkbox-container">
+							<input type="checkbox" id="chkEst" th:field="*{estado}" />
+							<span class="checkmark"></span>
+							<span class="checkbox-label">
+								<i class="fas fa-toggle-on"></i> Compra Activa
+							</span>
+						</label>
+					</div>
+
+					<div class="card-footer">
+						<button type="submit" class="button button-success">
+							<i class="fas fa-save"></i> Guardar Cambios
+						</button>
+						<a th:href="@{/listarcompra}" class="button button-secondary">
+							<i class="fas fa-arrow-left"></i> Volver al Listado
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script th:src="@{/js/menu.js}"></script>
+	</body>
+</html>

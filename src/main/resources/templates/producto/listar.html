@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Pastelería - Productos</title>
+		<link th:href="@{/css/style.css}" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1><i class="fas fa-birthday-cake"></i> Gestión de Productos</h1>
+		</header>
+
+		<nav>
+			<button class="menu-toggle" id="menuToggle">
+				<i class="fas fa-bars"></i> Menú de Navegación
+			</button>
+			<div class="nav-container" id="navContainer">
+				<a th:href="@{/listarcategoria}" class="nav-item">
+					<i class="fas fa-tags"></i> Categorías
+				</a>
+				<a th:href="@{/listarcliente}" class="nav-item">
+					<i class="fas fa-users"></i> Clientes
+				</a>
+				<a th:href="@{/listarcompra}" class="nav-item">
+					<i class="fas fa-shopping-cart"></i> Compras
+				</a>
+				<a th:href="@{/listardetallecompra}" class="nav-item">
+					<i class="fas fa-receipt"></i> Detalle C.
+				</a>
+				<a th:href="@{/listardetallepedido}" class="nav-item">
+					<i class="fas fa-clipboard-list"></i> Detalle P.
+				</a>
+				<a th:href="@{/listarempleado}" class="nav-item">
+					<i class="fas fa-id-card"></i> Empleados
+				</a>
+				<a th:href="@{/listarinsumo}" class="nav-item">
+					<i class="fas fa-box-open"></i> Insumos
+				</a>
+				<a th:href="@{/listarpedido}" class="nav-item">
+					<i class="fas fa-cookie"></i> Pedidos
+				</a>
+				<a th:href="@{/listarproducto}" class="nav-item active">
+					<i class="fas fa-birthday-cake"></i> Productos
+				</a>
+				<a th:href="@{/listarproveedor}" class="nav-item">
+					<i class="fas fa-truck"></i> Proveedores
+				</a>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="card fade-in">
+				<h2>Listado de Productos</h2>
+
+				<div class="table-responsive">
+					<table>
+						<thead>
+							<tr>
+								<th>Código</th>
+								<th>Nombre</th>
+								<th>Descripción</th>
+								<th>Precio</th>
+								<th>Tiempo Preparación</th>
+								<th>Stock</th>
+								<th>Estado</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="producto : ${productos}">
+								<td th:text="${producto.codigo}"></td>
+								<td th:text="${producto.nombre}"></td>
+								<td th:text="${producto.descripcion}"></td>
+								<td th:text="${producto.precio}"></td>
+								<td th:text="${producto.tiempoPreparacion}"></td>
+								<td th:text="${producto.stock}"></td>
+								<td>
+									<span
+										th:if="${producto.estado}"
+										class="badge badge-success"
+									>
+										<i class="fas fa-check-circle"></i> Activo
+									</span>
+									<span
+										th:unless="${producto.estado}"
+										class="badge badge-danger"
+									>
+										<i class="fas fa-times-circle"></i> Inactivo
+									</span>
+								</td>
+								<td>
+									<a
+										th:href="@{/actualizaproducto/{id}(id=${producto.codigo})}"
+										class="button button-warning"
+									>
+										<i class="fas fa-edit"></i> Editar
+									</a>
+									<a
+										th:href="@{/eliminarproducto/{id}(id=${producto.codigo})}"
+										class="button button-danger"
+									>
+										<i class="fas fa-trash-alt"></i> Eliminar
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="card-footer">
+					<a th:href="@{/registroproducto}" class="button button-success">
+						<i class="fas fa-plus-circle"></i> Nuevo Producto
+					</a>
+					<a th:href="@{/menuprincipal}" class="button button-secondary">
+						<i class="fas fa-arrow-left"></i> Volver al Menú
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<script th:src="@{/js/menu.js}"></script>
+	</body>
+</html>

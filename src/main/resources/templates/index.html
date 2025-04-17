@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Pastelería - Inicio</title>
+		<link th:href="@{/css/style.css}" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1><i class="fas fa-birthday-cake"></i> Pastelería</h1>
+		</header>
+
+		<div class="container">
+			<div class="card fade-in">
+				<!--<img th:src="@{/img/logo.webp}" alt="Logo de la Pastelería" /> -->
+				<img th:src="@{/img/logo.bp}" alt="Logo de la Pastelería" />
+
+				<h2>¡Bienvenido!</h2>
+				<p>
+					Sistema de gestión para nuestra pastelería artesanal. Accede a
+					todas las herramientas para administrar pedidos, inventario y
+					más.
+				</p>
+				<a th:href="@{/menuprincipal}" class="button">
+					<i class="fas fa-chevron-right"></i> Ingresar al Sistema
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

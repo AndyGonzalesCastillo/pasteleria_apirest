@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Pastelería - Actualizar Insumo</title>
+		<link th:href="@{/css/style.css}" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1><i class="fas fa-edit"></i> Actualización de Insumo</h1>
+		</header>
+
+		<nav>
+			<button class="menu-toggle" id="menuToggle">
+				<i class="fas fa-bars"></i> Menú de Navegación
+			</button>
+			<div class="nav-container" id="navContainer">
+				<a th:href="@{/listarcategoria}" class="nav-item">
+					<i class="fas fa-tags"></i> Categorías
+				</a>
+				<a th:href="@{/listarcliente}" class="nav-item">
+					<i class="fas fa-users"></i> Clientes
+				</a>
+				<a th:href="@{/listarcompra}" class="nav-item">
+					<i class="fas fa-shopping-cart"></i> Compras
+				</a>
+				<a th:href="@{/listardetallecompra}" class="nav-item">
+					<i class="fas fa-receipt"></i> Detalle C.
+				</a>
+				<a th:href="@{/listardetallepedido}" class="nav-item">
+					<i class="fas fa-clipboard-list"></i> Detalle P.
+				</a>
+				<a th:href="@{/listarempleado}" class="nav-item">
+					<i class="fas fa-id-card"></i> Empleados
+				</a>
+				<a th:href="@{/listarinsumo}" class="nav-item active">
+					<i class="fas fa-box-open"></i> Insumos
+				</a>
+				<a th:href="@{/listarpedido}" class="nav-item">
+					<i class="fas fa-cookie"></i> Pedidos
+				</a>
+				<a th:href="@{/listarproducto}" class="nav-item">
+					<i class="fas fa-birthday-cake"></i> Productos
+				</a>
+				<a th:href="@{/listarproveedor}" class="nav-item">
+					<i class="fas fa-truck"></i> Proveedores
+				</a>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="card fade-in">
+				<h2>Actualizar Información del Insumo</h2>
+				<p>Complete los campos para actualizar el insumo seleccionado.</p>
+
+				<form
+					th:action="@{/actualizarinsumo/{id}(id=${insumos.codigo})}"
+					method="post"
+					th:object="${insumos}"
+					class="form-container"
+				>
+					<div class="form-group">
+						<label for="txtCod">
+							<i class="fas fa-hashtag"></i> Código:
+						</label>
+						<input
+							type="text"
+							id="txtCod"
+							name="txtCod"
+							readonly
+							th:field="*{codigo}"
+							class="form-control readonly"
+						/>
+						<small>Este campo no se puede modificar</small>
+					</div>
+
+					<div class="form-group">
+						<label for="txtNom">
+							<i class="fas fa-font"></i> Nombre:
+						</label>
+						<input
+							type="text"
+							id="txtNom"
+							name="txtNom"
+							th:field="*{nombre}"
+							class="form-control"
+							required
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="txtDes">
+							<i class="fas fa-align-left"></i> Descripción:
+						</label>
+						<textarea
+							id="txtDes"
+							name="txtDes"
+							th:field="*{descripcion}"
+							class="form-control"
+							rows="2"
+						></textarea>
+					</div>
+
+					<div class="form-group">
+						<label for="txtUM">
+							<i class="fas fa-ruler-combined"></i> Unidad de Medida:
+						</label>
+						<input
+							type="text"
+							id="txtUM"
+							name="txtUM"
+							th:field="*{unidadMedida}"
+							class="form-control"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="txtSA">
+							<i class="fas fa-boxes"></i> Stock Actual:
+						</label>
+						<input
+							type="number"
+							id="txtSA"
+							name="txtSA"
+							th:field="*{stockActual}"
+							class="form-control"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="txtSM">
+							<i class="fas fa-box"></i> Stock Mínimo:
+						</label>
+						<input
+							type="number"
+							id="txtSM"
+							name="txtSM"
+							th:field="*{stockMinimo}"
+							class="form-control"
+						/>
+					</div>
+
+					<div class="form-group checkbox-group">
+						<label class="checkbox-container">
+							<input type="checkbox" id="chkEst" th:field="*{estado}" />
+							<span class="checkmark"></span>
+							<span class="checkbox-label">
+								<i class="fas fa-toggle-on"></i> Insumo Activo
+							</span>
+						</label>
+					</div>
+
+					<div class="card-footer">
+						<button type="submit" class="button button-success">
+							<i class="fas fa-save"></i> Guardar Cambios
+						</button>
+						<a th:href="@{/listarinsumo}" class="button button-secondary">
+							<i class="fas fa-arrow-left"></i> Volver al Listado
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script th:src="@{/js/menu.js}"></script>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Pastelería - Panel de Control</title>
+		<link th:href="@{/css/style.css}" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1><i class="fas fa-birthday-cake"></i> Panel de Control</h1>
+		</header>
+
+		<nav>
+			<button class="menu-toggle" id="menuToggle">
+				<i class="fas fa-bars"></i> Menú de Navegación
+			</button>
+			<div class="nav-container" id="navContainer">
+				<a th:href="@{/listarcategoria}" class="nav-item">
+					<i class="fas fa-tags"></i> Categorías
+				</a>
+				<a th:href="@{/listarcliente}" class="nav-item">
+					<i class="fas fa-users"></i> Clientes
+				</a>
+				<a th:href="@{/listarcompra}" class="nav-item">
+					<i class="fas fa-shopping-cart"></i> Compras
+				</a>
+				<a th:href="@{/listardetallecompra}" class="nav-item">
+					<i class="fas fa-receipt"></i> Detalle C.
+				</a>
+				<a th:href="@{/listardetallepedido}" class="nav-item">
+					<i class="fas fa-clipboard-list"></i> Detalle P.
+				</a>
+				<a th:href="@{/listarempleado}" class="nav-item">
+					<i class="fas fa-id-card"></i> Empleados
+				</a>
+				<a th:href="@{/listarinsumo}" class="nav-item">
+					<i class="fas fa-box-open"></i> Insumos
+				</a>
+				<a th:href="@{/listarpedido}" class="nav-item">
+					<i class="fas fa-cookie"></i> Pedidos
+				</a>
+				<a th:href="@{/listarproducto}" class="nav-item">
+					<i class="fas fa-birthday-cake"></i> Productos
+				</a>
+				<a th:href="@{/listarproveedor}" class="nav-item">
+					<i class="fas fa-truck"></i> Proveedores
+				</a>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="card fade-in">
+				<img src="/img/logo.webp" alt="Logo de la Pastelería" />
+				<h2>¡Bienvenido al Sistema de Gestión!</h2>
+				<p>
+					Administre fácilmente todos los aspectos de su pastelería desde
+					un solo lugar. Seleccione una opción del menú superior para
+					comenzar.
+				</p>
+
+				<div class="card-footer">
+					<a th:href="@{/listarcategoria}" class="button">
+						<i class="fas fa-tags"></i> Gestionar Categorías
+					</a>
+					<a th:href="@{/listarproducto}" class="button">
+						<i class="fas fa-birthday-cake"></i> Gestionar Productos
+					</a>
+					<a th:href="@{/listarpedido}" class="button">
+						<i class="fas fa-cookie"></i> Gestionar Pedidos
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const menuToggle = document.getElementById('menuToggle');
+				const navContainer = document.getElementById('navContainer');
+
+				const currentLocation = window.location.pathname;
+				const menuItems = document.querySelectorAll('.nav-container a');
+
+				menuItems.forEach((item) => {
+					if (currentLocation.includes(item.getAttribute('href'))) {
+						item.classList.add('active');
+					}
+				});
+
+				menuToggle.addEventListener('click', function () {
+					navContainer.classList.toggle('active');
+				});
+
+				const fadeElements = document.querySelectorAll('.fade-in');
+				fadeElements.forEach((el) => {
+					el.style.opacity = '0';
+					setTimeout(() => {
+						el.style.opacity = '1';
+					}, 100);
+				});
+			});
+		</script>
+	</body>
+</html>

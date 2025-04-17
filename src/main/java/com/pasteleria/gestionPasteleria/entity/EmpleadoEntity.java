@@ -1,11 +1,7 @@
 package com.pasteleria.gestionPasteleria.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.util.Date;
 import lombok.AccessLevel;
@@ -14,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Builder
 @NoArgsConstructor
@@ -48,8 +45,10 @@ public class EmpleadoEntity implements Serializable  {
     
     @Column(name="puesto")
     String puesto;
-    
+
     @Column(name="fecha_contratacion")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
     Date fechaContratacion;
     
     @Column(name="estado")

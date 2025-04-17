@@ -1,17 +1,12 @@
 package com.pasteleria.gestionPasteleria.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import lombok.*;
 import java.util.Date; 
 import lombok.experimental.FieldDefaults;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Builder 
 @NoArgsConstructor 
@@ -37,9 +32,13 @@ public class PedidoEntity implements Serializable {
     EmpleadoEntity empleado;
     
     @Column(name="fecha_pedido")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
     Date fechaPedido;
-    
+
     @Column(name="fecha_entrega")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
     Date fechaEntrega;
     
     @Column(name="tipo_entrega")
@@ -50,6 +49,7 @@ public class PedidoEntity implements Serializable {
     
     @Column(name="estado_pedido")
     String estadoPedido;
+
     @Column(name="total")
     double total;
     

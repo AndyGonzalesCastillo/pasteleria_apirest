@@ -1,0 +1,1396 @@
+{
+	"info": {
+		"_postman_id": "6f6e88c2-f95c-4f51-8531-90fbb0ab4895",
+		"name": "EPFinal-PasteleriaValery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37853194"
+	},
+	"item": [
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/categoria/custom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"categoria",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/categoria/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"categoria",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba categoria\",\r\n    \"descripcion\": \"prueba descripcion\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba categoria Actualizado\",\r\n    \"descripcion\": \"prueba descripcion Actualizado\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/categoria/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"categoria",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/categoria/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"categoria",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empleado",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/empleado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"empleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/empleado/custom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"empleado",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/empleado/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"empleado",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba nombre\",\r\n    \"apellido\": \"prueba apelldio\",\r\n    \"direccion\": \"prueba direccion\",\r\n    \"correo\": \"prueba correo\",\r\n    \"telefono\": \"prueba telefono\",\r\n    \"puesto\": \"prueba puesto\",\r\n    \"fechaContratacion\": \"2020-01-15T05\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/empleado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"empleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba nombre actualizado\",\r\n    \"apellido\": \"prueba apelldio actualizado\",\r\n    \"direccion\": \"prueba direccion actualizado\",\r\n    \"correo\": \"prueba correo actualizado\",\r\n    \"telefono\": \"960936934\",\r\n    \"puesto\": \"prueba puesto actualizado\",\r\n    \"fechaContratacion\": \"2020-01-15\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/empleado/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"empleado",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/empleado/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"empleado",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/producto/custom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"producto",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/producto/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"producto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoria\": {\r\n        \"codigo\": 2,\r\n        \"nombre\": \"Tortas Temáticas\",\r\n        \"descripcion\": \"Tortas personalizadas con diseños especiales\",\r\n        \"estado\": true\r\n    },\r\n    \"nombre\": \"Nombre de prueba\",\r\n    \"descripcion\": \"prueba de descripcion de la torta\",\r\n    \"precio\": 75.50,\r\n    \"tiempoPreparacion\": 90,\r\n    \"stock\": 10,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoria\": {\r\n        \"codigo\": 2,\r\n        \"nombre\": \"Tortas Temáticas\",\r\n        \"descripcion\": \"Tortas personalizadas con diseños especiales\",\r\n        \"estado\": true\r\n    },\r\n    \"nombre\": \"Nombre de prueba actualizado\",\r\n    \"descripcion\": \"prueba de descripcion de la torta actualizado\",\r\n    \"precio\": 99.50,\r\n    \"tiempoPreparacion\": 101,\r\n    \"stock\": 11,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/producto/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"producto",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/producto/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"producto",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Insumo",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/insumo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"insumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/insumo/custom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"insumo",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/insumo/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"insumo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Prueba Nombre\",\r\n    \"descripcion\": \"Prueba descripcion\",\r\n    \"unidadMedida\": \"UNIDAD\",\r\n    \"stockActual\": 120.0,\r\n    \"stockMinimo\": 20.0,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/insumo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"insumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Prueba Nombre actualizado\",\r\n    \"descripcion\": \"Prueba descripcion actualizado\",\r\n    \"unidadMedida\": \"UNIDAD\",\r\n    \"stockActual\": 110.0,\r\n    \"stockMinimo\": 10.0,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/insumo/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"insumo",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/insumo/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"insumo",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/cliente/custom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"cliente",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/cliente/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"cliente",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba nombre\",\r\n    \"apellido\": \"prueba apellido\",\r\n    \"direccion\": \"prueba direccion\",\r\n    \"correo\": \"prueba@gmail.com\",\r\n    \"telefono\": \"999888770\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba nombre actualizado\",\r\n    \"apellido\": \"prueba apellido actualizado\",\r\n    \"direccion\": \"prueba direccion actualizado\",\r\n    \"correo\": \"pruebaactualizado@gmail.com\",\r\n    \"telefono\": \"999888770\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/cliente/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"cliente",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/cliente/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"cliente",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/pedido/custom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"pedido",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/pedido/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"pedido",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente\": {\r\n        \"codigo\": 5,\r\n        \"nombre\": \"Miguel\",\r\n        \"apellido\": \"Castro\",\r\n        \"direccion\": \"Jr. Libertad 890, Magdalena\",\r\n        \"correo\": \"miguel.castro@gmail.com\",\r\n        \"telefono\": \"999888781\",\r\n        \"estado\": true\r\n    },\r\n    \"empleado\": {\r\n        \"codigo\": 3,\r\n        \"nombre\": \"Ana\",\r\n        \"apellido\": \"López\",\r\n        \"direccion\": \"Calle Los Girasoles 789, Miraflores\",\r\n        \"correo\": \"ana.lopez@tortasvalery.com\",\r\n        \"telefono\": \"987654323\",\r\n        \"puesto\": \"Vendedor\",\r\n        \"fechaContratacion\": \"2021-06-10T05:00:00.000+00:00\",\r\n        \"estado\": true\r\n    },\r\n    \"fechaPedido\": \"2024-03-15T15:00:00.000+00:00\",\r\n    \"fechaEntrega\": \"2024-03-15T20:00:00.000+00:00\",\r\n    \"tipoEntrega\": \"Delivery\",\r\n    \"direccion\": \"prueba direccion\",\r\n    \"estadoPedido\": \"Pendiente\",\r\n    \"total\": 95.0,\r\n    \"observaciones\": null,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": 6,\r\n    \"cliente\": {\r\n        \"codigo\": 5,\r\n        \"nombre\": \"Miguel\",\r\n        \"apellido\": \"Castro\",\r\n        \"direccion\": \"Jr. Libertad 890, Magdalena\",\r\n        \"correo\": \"miguel.castro@gmail.com\",\r\n        \"telefono\": \"999888781\",\r\n        \"estado\": true\r\n    },\r\n    \"empleado\": {\r\n        \"codigo\": 3,\r\n        \"nombre\": \"Ana\",\r\n        \"apellido\": \"López\",\r\n        \"direccion\": \"Calle Los Girasoles 789, Miraflores\",\r\n        \"correo\": \"ana.lopez@tortasvalery.com\",\r\n        \"telefono\": \"987654323\",\r\n        \"puesto\": \"Vendedor\",\r\n        \"fechaContratacion\": \"2021-06-10T05:00:00.000+00:00\",\r\n        \"estado\": true\r\n    },\r\n    \"fechaPedido\": \"2024-03-15T15:00:00.000+00:00\",\r\n    \"fechaEntrega\": \"2024-03-15T20:00:00.000+00:00\",\r\n    \"tipoEntrega\": \"Delivery\",\r\n    \"direccion\": \"prueba direccion actualizado\",\r\n    \"estadoPedido\": \"Entregado\",\r\n    \"total\": 95.0,\r\n    \"observaciones\": \"Cliente satisfecho\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/pedido/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"pedido",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/pedido/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"pedido",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DetallePedido",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/detallepedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"detallepedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/detallepedido/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"detallepedido",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"codigo\": 2,\r\n        \"cliente\": {\r\n            \"codigo\": 2,\r\n            \"nombre\": \"Carmen\",\r\n            \"apellido\": \"Silva\",\r\n            \"direccion\": \"Jr. Mercaderes 456, Miraflores\",\r\n            \"correo\": \"carmen.silva@gmail.com\",\r\n            \"telefono\": \"999888778\",\r\n            \"estado\": true\r\n        },\r\n        \"empleado\": {\r\n            \"codigo\": 3,\r\n            \"nombre\": \"Ana\",\r\n            \"apellido\": \"López\",\r\n            \"direccion\": \"Calle Los Girasoles 789, Miraflores\",\r\n            \"correo\": \"ana.lopez@tortasvalery.com\",\r\n            \"telefono\": \"987654323\",\r\n            \"puesto\": \"Vendedor\",\r\n            \"fechaContratacion\": \"2021-06-10T05:00:00.000+00:00\",\r\n            \"estado\": true\r\n        },\r\n        \"fechaPedido\": \"2024-03-16T16:00:00.000+00:00\",\r\n        \"fechaEntrega\": \"2024-03-16T19:00:00.000+00:00\",\r\n        \"tipoEntrega\": \"Delivery\",\r\n        \"direccion\": \"Jr. Mercaderes 456, Miraflores\",\r\n        \"estadoPedido\": \"Entregado\",\r\n        \"total\": 120.0,\r\n        \"observaciones\": \"Entregar con cuidado\",\r\n        \"estado\": true\r\n    },\r\n    \"producto\": {\r\n        \"codigo\": 3,\r\n        \"categoria\": {\r\n            \"codigo\": 2,\r\n            \"nombre\": \"Tortas Temáticas\",\r\n            \"descripcion\": \"Tortas personalizadas con diseños especiales\",\r\n            \"estado\": true\r\n        },\r\n        \"nombre\": \"Torta Unicornio\",\r\n        \"descripcion\": \"Torta decorada con motivos de unicornio\",\r\n        \"precio\": 120.0,\r\n        \"tiempoPreparacion\": 180,\r\n        \"stock\": 2,\r\n        \"estado\": true\r\n    },\r\n    \"cantidad\": 1,\r\n    \"precioUnitario\": 120.0,\r\n    \"subtotal\": 120.0,\r\n    \"especificaciones\": \"Colores pastelesss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/detallepedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"detallepedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"codigo\": 2,\r\n        \"cliente\": {\r\n            \"codigo\": 2,\r\n            \"nombre\": \"Carmen\",\r\n            \"apellido\": \"Silva\",\r\n            \"direccion\": \"Jr. Mercaderes 456, Miraflores\",\r\n            \"correo\": \"carmen.silva@gmail.com\",\r\n            \"telefono\": \"999888778\",\r\n            \"estado\": true\r\n        },\r\n        \"empleado\": {\r\n            \"codigo\": 3,\r\n            \"nombre\": \"Ana\",\r\n            \"apellido\": \"López\",\r\n            \"direccion\": \"Calle Los Girasoles 789, Miraflores\",\r\n            \"correo\": \"ana.lopez@tortasvalery.com\",\r\n            \"telefono\": \"987654323\",\r\n            \"puesto\": \"Vendedor\",\r\n            \"fechaContratacion\": \"2021-06-10T05:00:00.000+00:00\",\r\n            \"estado\": true\r\n        },\r\n        \"fechaPedido\": \"2024-03-16T16:00:00.000+00:00\",\r\n        \"fechaEntrega\": \"2024-03-16T19:00:00.000+00:00\",\r\n        \"tipoEntrega\": \"Delivery\",\r\n        \"direccion\": \"Jr. Mercaderes 456, Miraflores\",\r\n        \"estadoPedido\": \"Entregado\",\r\n        \"total\": 120.0,\r\n        \"observaciones\": \"Entregar con cuidado\",\r\n        \"estado\": true\r\n    },\r\n    \"producto\": {\r\n        \"codigo\": 3,\r\n        \"categoria\": {\r\n            \"codigo\": 2,\r\n            \"nombre\": \"Tortas Temáticas\",\r\n            \"descripcion\": \"Tortas personalizadas con diseños especiales\",\r\n            \"estado\": true\r\n        },\r\n        \"nombre\": \"Torta Unicornio\",\r\n        \"descripcion\": \"Torta decorada con motivos de unicornio\",\r\n        \"precio\": 120.0,\r\n        \"tiempoPreparacion\": 180,\r\n        \"stock\": 2,\r\n        \"estado\": true\r\n    },\r\n    \"cantidad\": 1,\r\n    \"precioUnitario\": 120.0,\r\n    \"subtotal\": 120.0,\r\n    \"especificaciones\": \"Colores pastelesss acutalizado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/detallepedido/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"detallepedido",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proveedor",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/proveedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/proveedor/custom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"proveedor",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/proveedor/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"proveedor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba nombre\",\r\n    \"direccion\": \"prueba direccion\",\r\n    \"correo\": \"pruebacorreo@gmail.com\",\r\n    \"telefono\": \"5113260660\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/proveedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"prueba nombre actualizado\",\r\n    \"direccion\": \"prueba direccion actualizado\",\r\n    \"correo\": \"pruebacorreoactualzado@gmail.com\",\r\n    \"telefono\": \"5113260660\",\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/proveedor/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"proveedor",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/proveedor/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"proveedor",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Compra",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/compra/custom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"compra",
+								"custom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/compra/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"compra",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"proveedor\": {\r\n        \"codigo\": 4,\r\n        \"nombre\": \"Negociaciones Casino SAC\",\r\n        \"direccion\": \"Jr. Amazonas 456, Centro de Lima\",\r\n        \"correo\": \"ventas@casino.com.pe\",\r\n        \"telefono\": \"5114524789\",\r\n        \"estado\": true\r\n    },\r\n    \"empleado\": {\r\n        \"codigo\": 4,\r\n        \"nombre\": \"Negociaciones Casino SAC\",\r\n        \"direccion\": \"Jr. Amazonas 456, Centro de Lima\",\r\n        \"correo\": \"ventas@casino.com.pe\",\r\n        \"telefono\": \"5114524789\",\r\n        \"estado\": true\r\n    },\r\n    \"fechaCompra\": \"2024-03-20T05:00:00.000+00:00\",\r\n    \"totalCompra\": 1400.0,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"proveedor\": {\r\n        \"codigo\": 4,\r\n        \"nombre\": \"Negociaciones Casino SAC\",\r\n        \"direccion\": \"Jr. Amazonas 456, Centro de Lima\",\r\n        \"correo\": \"ventas@casino.com.pe\",\r\n        \"telefono\": \"5114524789\",\r\n        \"estado\": true\r\n    },\r\n    \"empleado\": {\r\n        \"codigo\": 4,\r\n        \"nombre\": \"Negociaciones Casino SAC\",\r\n        \"direccion\": \"Jr. Amazonas 456, Centro de Lima\",\r\n        \"correo\": \"ventas@casino.com.pe\",\r\n        \"telefono\": \"5114524789\",\r\n        \"estado\": true\r\n    },\r\n    \"fechaCompra\": \"2024-03-20T05:00:00.000+00:00\",\r\n    \"totalCompra\": 19000.0,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/compra/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"compra",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/compra/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"compra",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DetalleCompra",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/detallecompra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"detallecompra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/detallecompra/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"detallecompra",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"compra\": {\r\n        \"codigo\": 1,\r\n        \"proveedor\": {\r\n            \"codigo\": 1,\r\n            \"nombre\": \"Alicorp SAA\",\r\n            \"direccion\": \"Av. Argentina 4793, Callao\",\r\n            \"correo\": \"ventas@alicorp.com.pe\",\r\n            \"telefono\": \"5114315400\",\r\n            \"estado\": true\r\n        },\r\n        \"empleado\": {\r\n            \"codigo\": 2,\r\n            \"nombre\": \"Gloria SA\",\r\n            \"direccion\": \"Av. República de Panamá 2461, La Victoria\",\r\n            \"correo\": \"ventas@gloria.com.pe\",\r\n            \"telefono\": \"5114707170\",\r\n            \"estado\": true\r\n        },\r\n        \"fechaCompra\": \"2024-03-01T05:00:00.000+00:00\",\r\n        \"totalCompra\": 1500.0,\r\n        \"estado\": true\r\n    },\r\n    \"insumo\": {\r\n        \"codigo\": 2,\r\n        \"nombre\": \"Azúcar\",\r\n        \"descripcion\": \"Azúcar blanca refinada\",\r\n        \"unidadMedida\": \"KG\",\r\n        \"stockActual\": 40.0,\r\n        \"stockMinimo\": 8.0,\r\n        \"estado\": true\r\n    },\r\n    \"cantidad\": 160,\r\n    \"precioUnitario\": 20.50,\r\n    \"subtotal\": 500.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/detallecompra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"detallecompra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"compra\": {\r\n        \"codigo\": 1,\r\n        \"proveedor\": {\r\n            \"codigo\": 1,\r\n            \"nombre\": \"Alicorp SAA\",\r\n            \"direccion\": \"Av. Argentina 4793, Callao\",\r\n            \"correo\": \"ventas@alicorp.com.pe\",\r\n            \"telefono\": \"5114315400\",\r\n            \"estado\": true\r\n        },\r\n        \"empleado\": {\r\n            \"codigo\": 2,\r\n            \"nombre\": \"Gloria SA\",\r\n            \"direccion\": \"Av. República de Panamá 2461, La Victoria\",\r\n            \"correo\": \"ventas@gloria.com.pe\",\r\n            \"telefono\": \"5114707170\",\r\n            \"estado\": true\r\n        },\r\n        \"fechaCompra\": \"2024-03-01T05:00:00.000+00:00\",\r\n        \"totalCompra\": 1500.0,\r\n        \"estado\": true\r\n    },\r\n    \"insumo\": {\r\n        \"codigo\": 2,\r\n        \"nombre\": \"Azúcar\",\r\n        \"descripcion\": \"Azúcar blanca refinada\",\r\n        \"unidadMedida\": \"KG\",\r\n        \"stockActual\": 40.0,\r\n        \"stockMinimo\": 8.0,\r\n        \"estado\": true\r\n    },\r\n    \"cantidad\": 304,\r\n    \"precioUnitario\": 99.5,\r\n    \"subtotal\": 510.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/pasteleriavalery/detallecompra/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"pasteleriavalery",
+								"detallecompra",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
